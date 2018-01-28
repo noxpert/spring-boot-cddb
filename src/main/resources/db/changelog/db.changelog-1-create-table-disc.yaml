@@ -1,0 +1,20 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1-create-table-disc
+      author: noxpert
+      changes:
+        - createTable:
+            tableName: disc
+            columns:
+              - column:
+                  name: id
+                  type: varchar(12)
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: title
+                  type: varchar(200)
+                  constraints:
+                    nullable: false
+      schemaName: music
